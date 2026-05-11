@@ -28,3 +28,6 @@ app-down:
 
 app-down-v:
 	@docker-compose down -v
+
+api-docs:
+	RSWAG_DRY_RUN=0 RAILS_ENV=test rails rswag:specs:swaggerize ADDITIONAL_RSPEC_OPTS="-fd"
